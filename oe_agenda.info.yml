@@ -1,0 +1,5 @@
+name: OpenEuropa Agenda
+description: An agenda entity, organised in days and sessions per day.
+package: OpenEuropa
+type: module
+core_version_requirement: ^9.4 || ^10
