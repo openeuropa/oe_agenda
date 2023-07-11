@@ -33,14 +33,6 @@ drupal:
         - "vendor"
         - "${drupal.root}"
       file_private_path: "sites/default/files/private"
-    databases:
-      sparql_default:
-        default:
-          prefix: ""
-          host: ${drupal.sparql.host}
-          port: ${drupal.sparql.port}
-          namespace: 'Drupal\sparql_entity_storage\Driver\Database\sparql'
-          driver: 'sparql'
 
 commands:
   drupal:site-setup:
