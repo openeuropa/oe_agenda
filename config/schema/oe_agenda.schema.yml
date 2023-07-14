@@ -1,0 +1,13 @@
+oe_agenda.oe_agenda_type.*:
+  type: config_entity
+  label: 'Agenda type settings'
+  mapping:
+    id:
+      type: string
+      label: 'Machine-readable name'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text
+      label: 'Description'
