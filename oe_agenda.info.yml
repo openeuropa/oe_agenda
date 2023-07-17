@@ -5,6 +5,7 @@ type: module
 core_version_requirement: ^9.4 || ^10
 dependencies:
   - entity_reference_revisions:entity_reference_revisions
+  - inline_entity_form:inline_entity_form
   - oe_content:oe_content_entity
   - oe_content:oe_content_sub_entity
 
