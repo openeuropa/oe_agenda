@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - oe_agenda.oe_agenda_type.oe_default
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: oe_agenda.oe_default
+target_entity_type_id: oe_agenda
+target_bundle: oe_default
+default_langcode: site_default
+language_alterable: true
