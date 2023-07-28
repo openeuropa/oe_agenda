@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agenda
+    - node.type.test_bundle
+    - oe_agenda.oe_agenda_type.oe_default
+  module:
+    - entity_reference_revisions
+id: node.test_bundle.field_agenda
+field_name: field_agenda
+entity_type: node
+bundle: test_bundle
+label: Agenda
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:oe_agenda'
+  handler_settings:
+    target_bundles:
+      oe_default: oe_default
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

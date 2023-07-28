@@ -1,0 +1,18 @@
+name: OpenEuropa Agenda Test
+description: Test module for OpenEuropa Agenda.
+package: Testing
+
+type: module
+core_version_requirement: ^9.4 || ^10
+hidden: true
+
+dependencies:
+  - oe_agenda:oe_agenda
+
+config_devel:
+  install:
+    - core.entity_form_display.node.test_bundle.default
+    - core.entity_view_display.node.test_bundle.default
+    - field.storage.node.field_agenda
+    - field.field.node.test_bundle.field_agenda
+    - node.type.test_bundle
