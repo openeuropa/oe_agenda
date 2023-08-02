@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.oe_agenda.oe_agenda_days
+    - oe_agenda.oe_agenda_day_type.oe_default
+    - oe_agenda.oe_agenda_type.oe_default
+  module:
+    - composite_reference
+    - entity_reference_revisions
+third_party_settings:
+  composite_reference:
+    composite: true
+    composite_revisions: true
+id: oe_agenda.oe_default.oe_agenda_days
+field_name: oe_agenda_days
+entity_type: oe_agenda
+bundle: oe_default
+label: Days
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:oe_agenda_day'
+  handler_settings:
+    target_bundles:
+      oe_default: oe_default
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

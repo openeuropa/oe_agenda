@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.oe_agenda.oe_default.oe_agenda_days
+    - oe_agenda.oe_agenda_type.oe_default
+  module:
+    - entity_reference_revisions
+id: oe_agenda.oe_default.default
+targetEntityType: oe_agenda
+bundle: oe_default
+mode: default
+content:
+  oe_agenda_days:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
