@@ -13,5 +13,6 @@ dependencies:
 config_devel:
   install:
     - oe_agenda.oe_agenda_type.oe_default
+    - oe_agenda.oe_agenda_day_type.oe_default
   optional:
     - language.content_settings.oe_agenda.oe_default
