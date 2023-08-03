@@ -43,6 +43,9 @@ class AgendaEntityTest extends WebDriverTestBase {
     $page->fillField('Title', 'Test title');
     $page->pressButton('Add new agenda');
     $assert_session->assertWaitOnAjaxRequest();
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_date][0][value][date]', '08-21-2023');
+    $page->pressButton('Create day');
+    $assert_session->assertWaitOnAjaxRequest();
     $page->pressButton('Create agenda');
     $assert_session->assertWaitOnAjaxRequest();
     // Assert agenda label.
