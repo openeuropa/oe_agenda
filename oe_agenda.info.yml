@@ -27,3 +27,5 @@ config_devel:
   optional:
     - language.content_settings.oe_agenda.oe_default
     - language.content_settings.oe_agenda_day.oe_default
+    - language.content_settings.oe_agenda_session.oe_break
+    - language.content_settings.oe_agenda_session.oe_default
