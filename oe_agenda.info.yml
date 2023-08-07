@@ -18,8 +18,10 @@ config_devel:
     - core.entity_view_display.oe_agenda_day.oe_default.default
     - field.field.oe_agenda.oe_default.oe_agenda_days
     - field.field.oe_agenda_day.oe_default.oe_day_date
+    - field.field.oe_agenda_day.oe_default.oe_day_sessions
     - field.storage.oe_agenda.oe_agenda_days
     - field.storage.oe_agenda_day.oe_day_date
+    - field.storage.oe_agenda_day.oe_day_sessions
     - oe_agenda.oe_agenda_type.oe_default
     - oe_agenda.oe_agenda_day_type.oe_default
     - oe_agenda.oe_agenda_session_type.oe_break
