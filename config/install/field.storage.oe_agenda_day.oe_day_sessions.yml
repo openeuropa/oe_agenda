@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - oe_agenda
+id: oe_agenda_day.oe_day_sessions
+field_name: oe_day_sessions
+entity_type: oe_agenda_day
+type: entity_reference_revisions
+settings:
+  target_type: oe_agenda_session
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
