@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.oe_agenda_session.oe_default.oe_session_hours
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - time_field
+id: oe_agenda_session.oe_default.default
+targetEntityType: oe_agenda_session
+bundle: oe_default
+mode: default
+content:
+  oe_session_hours:
+    type: time_range_widget
+    weight: 0
+    region: content
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+hidden:
+  status: true
