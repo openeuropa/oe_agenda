@@ -7,6 +7,7 @@ dependencies:
   - composite_reference:composite_reference
   - entity_reference_revisions:entity_reference_revisions
   - inline_entity_form:inline_entity_form
+  - link_description:link_description
   - oe_content:oe_content_entity
   - oe_content:oe_content_sub_entity
   - time_field:time_field
