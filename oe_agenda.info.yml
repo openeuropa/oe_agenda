@@ -9,6 +9,7 @@ dependencies:
   - inline_entity_form:inline_entity_form
   - oe_content:oe_content_entity
   - oe_content:oe_content_sub_entity
+  - time_field:time_field
 
 config_devel:
   install:
