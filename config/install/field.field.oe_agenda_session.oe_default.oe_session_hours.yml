@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.oe_agenda_session.oe_session_hours
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - time_field
+id: oe_agenda_session.oe_default.oe_session_hours
+field_name: oe_session_hours
+entity_type: oe_agenda_session
+bundle: oe_default
+label: Hours
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time_range
