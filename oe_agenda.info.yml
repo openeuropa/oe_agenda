@@ -27,6 +27,7 @@ config_devel:
     - field.field.oe_agenda_session.oe_break.oe_session_details
     - field.field.oe_agenda_session.oe_break.oe_session_hours
     - field.field.oe_agenda_session.oe_break.oe_session_name
+    - field.field.oe_agenda_session.oe_default.oe_session_details
     - field.field.oe_agenda_session.oe_default.oe_session_hours
     - field.field.oe_agenda_session.oe_default.oe_session_name
     - field.storage.oe_agenda.oe_agenda_days
