@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.oe_agenda_session.oe_break.oe_session_hours
+    - field.field.oe_agenda_session.oe_break.oe_session_name
     - oe_agenda.oe_agenda_session_type.oe_break
   module:
     - time_field
@@ -18,6 +19,14 @@ content:
     settings:
       enabled: false
       step: 5
+    third_party_settings: {  }
+  oe_session_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   status: true
