@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.oe_agenda_session.oe_session_online_link
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - link_description
+id: oe_agenda_session.oe_default.oe_session_online_link
+field_name: oe_session_online_link
+entity_type: oe_agenda_session
+bundle: oe_default
+label: 'Online link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link_description
