@@ -5,11 +5,13 @@ dependencies:
     - field.field.oe_agenda_session.oe_default.oe_session_details
     - field.field.oe_agenda_session.oe_default.oe_session_hours
     - field.field.oe_agenda_session.oe_default.oe_session_intro
+    - field.field.oe_agenda_session.oe_default.oe_session_moderators
     - field.field.oe_agenda_session.oe_default.oe_session_name
     - field.field.oe_agenda_session.oe_default.oe_session_online_link
     - field.field.oe_agenda_session.oe_default.oe_session_venue
     - oe_agenda.oe_agenda_session_type.oe_default
   module:
+    - entity_reference_revisions
     - link_description
     - time_field
 id: oe_agenda_session.oe_default.default
@@ -39,6 +41,16 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  oe_session_moderators:
+    type: entity_reference_revisions_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   oe_session_name:
