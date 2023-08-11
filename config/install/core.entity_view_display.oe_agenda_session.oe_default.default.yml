@@ -6,6 +6,7 @@ dependencies:
     - field.field.oe_agenda_session.oe_default.oe_session_hours
     - field.field.oe_agenda_session.oe_default.oe_session_intro
     - field.field.oe_agenda_session.oe_default.oe_session_name
+    - field.field.oe_agenda_session.oe_default.oe_session_online_link
     - field.field.oe_agenda_session.oe_default.oe_session_venue
     - oe_agenda.oe_agenda_session_type.oe_default
   module:
@@ -46,6 +47,18 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  oe_session_online_link:
+    type: link_description
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
   oe_session_venue:
     type: link_description

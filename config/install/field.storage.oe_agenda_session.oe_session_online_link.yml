@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - link_description
+    - oe_agenda
+id: oe_agenda_session.oe_session_online_link
+field_name: oe_session_online_link
+entity_type: oe_agenda_session
+type: link_description
+settings: {  }
+module: link_description
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
