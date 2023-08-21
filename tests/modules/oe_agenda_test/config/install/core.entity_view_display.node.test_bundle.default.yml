@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_bundle.field_agenda
+    - node.type.test_bundle
+  module:
+    - entity_reference_revisions
+    - user
+id: node.test_bundle.default
+targetEntityType: node
+bundle: test_bundle
+mode: default
+content:
+  field_agenda:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  oe_content_content_owner: true
+  oe_content_legacy_link: true
+  oe_content_navigation_title: true
+  oe_content_short_title: true

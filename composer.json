@@ -7,7 +7,10 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.0",
-        "drupal/core": "^9.4 || ^10"
+        "drupal/composite_reference": "^2.2",
+        "drupal/core": "^9.4 || ^10",
+        "drupal/entity_reference_revisions": "^1.10",
+        "openeuropa/oe_content": "^3.0@beta"
     },
     "require-dev": {
         "composer/installers": "^2.0",

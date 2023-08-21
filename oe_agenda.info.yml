@@ -3,3 +3,15 @@ description: An agenda entity, organised in days and sessions per day.
 package: OpenEuropa
 type: module
 core_version_requirement: ^9.4 || ^10
+dependencies:
+  - composite_reference:composite_reference
+  - entity_reference_revisions:entity_reference_revisions
+  - inline_entity_form:inline_entity_form
+  - oe_content:oe_content_entity
+  - oe_content:oe_content_sub_entity
+
+config_devel:
+  install:
+    - oe_agenda.oe_agenda_type.oe_default
+  optional:
+    - language.content_settings.oe_agenda.oe_default
