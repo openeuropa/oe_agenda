@@ -31,6 +31,7 @@ config_devel:
     - field.field.oe_agenda_session.oe_default.oe_session_moderators
     - field.field.oe_agenda_session.oe_default.oe_session_name
     - field.field.oe_agenda_session.oe_default.oe_session_online_link
+    - field.field.oe_agenda_session.oe_default.oe_session_speakers
     - field.field.oe_agenda_session.oe_default.oe_session_venue
     - field.storage.oe_agenda.oe_agenda_days
     - field.storage.oe_agenda_day.oe_day_date
@@ -41,6 +42,7 @@ config_devel:
     - field.storage.oe_agenda_session.oe_session_moderators
     - field.storage.oe_agenda_session.oe_session_name
     - field.storage.oe_agenda_session.oe_session_online_link
+    - field.storage.oe_agenda_session.oe_session_speakers
     - field.storage.oe_agenda_session.oe_session_venue
     - oe_agenda.oe_agenda_type.oe_default
     - oe_agenda.oe_agenda_day_type.oe_default

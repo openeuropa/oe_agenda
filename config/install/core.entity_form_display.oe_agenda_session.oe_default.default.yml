@@ -8,6 +8,7 @@ dependencies:
     - field.field.oe_agenda_session.oe_default.oe_session_moderators
     - field.field.oe_agenda_session.oe_default.oe_session_name
     - field.field.oe_agenda_session.oe_default.oe_session_online_link
+    - field.field.oe_agenda_session.oe_default.oe_session_speakers
     - field.field.oe_agenda_session.oe_default.oe_session_venue
     - oe_agenda.oe_agenda_session_type.oe_default
   module:
@@ -68,6 +69,16 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  oe_session_speakers:
+    type: entity_reference_revisions_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   oe_session_venue:
     type: link_description
