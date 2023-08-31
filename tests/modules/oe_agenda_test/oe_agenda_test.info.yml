@@ -12,7 +12,10 @@ dependencies:
 config_devel:
   install:
     - core.entity_form_display.node.test_bundle.default
+    - core.entity_form_display.node.test_person_bundle.default
     - core.entity_view_display.node.test_bundle.default
+    - core.entity_view_display.node.test_person_bundle.default
     - field.storage.node.field_agenda
     - field.field.node.test_bundle.field_agenda
     - node.type.test_bundle
+    - node.type.test_person_bundle
