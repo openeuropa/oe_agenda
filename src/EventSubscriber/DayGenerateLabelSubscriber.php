@@ -23,8 +23,8 @@ class DayGenerateLabelSubscriber extends SubEntityGenerateLabelSubscriberBase {
       // Display the day title as label if set, otherwise the date for Default
       // day type.
       return $entity->get('oe_day_title')->isEmpty()
-        ? $entity->oe_day_date->value
-        : $entity->oe_day_title->value;
+        ? $entity->get('oe_day_date')->value
+        : $entity->get('oe_day_title')->value;
     }
 
     return parent::defaultLabel($entity);

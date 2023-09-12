@@ -69,6 +69,17 @@ class DayEntityTest extends WebDriverTestBase {
     $page->pressButton('ief-remove-confirm-field_agenda-form-0-oe_agenda_days-form-1');
     $assert_session->assertWaitOnAjaxRequest();
     $assert_session->pageTextNotContains('2023-08-22');
+
+    // Save test node with agenda.
+    $page->pressButton('Create agenda');
+    $assert_session->assertWaitOnAjaxRequest();
+    $page->pressButton('Save');
+
+    // Assert texts on the node page.
+    $assert_session->pageTextContains('Test title');
+    $assert_session->pageTextContains('Agenda');
+    $assert_session->pageTextContains('Mon, 08/21/2023 - 12:00');
+    $assert_session->pageTextNotContains('Tue, 08/22/2023 - 12:00');
   }
 
 }
