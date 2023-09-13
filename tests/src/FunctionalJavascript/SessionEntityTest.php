@@ -140,6 +140,7 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->pressButton('Save');
 
     // Assert texts on the node page.
+    $assert_session->pageTextContains('Test default session');
     $assert_session->pageTextContains('Test session introduction.');
     $assert_session->pageTextContains('Test session details.');
     $assert_session->pageTextContains('Test venue long description.');

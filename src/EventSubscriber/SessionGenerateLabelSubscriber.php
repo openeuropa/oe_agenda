@@ -17,8 +17,8 @@ class SessionGenerateLabelSubscriber extends SubEntityGenerateLabelSubscriberBas
    */
   protected function generateLabel(ContentEntityInterface $entity): ?string {
     // Display the session name as label if set.
-    return $entity->hasField('oe_session_name') && !$entity->get('oe_session_name')->isEmpty()
-      ? $entity->oe_session_name->value
+    return $entity->hasField('name') && !$entity->get('name')->isEmpty()
+      ? $entity->get('name')->value
       : parent::defaultLabel($entity);
   }
 
