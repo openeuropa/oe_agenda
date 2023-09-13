@@ -51,7 +51,7 @@ class DayEntityTest extends WebDriverTestBase {
     // Test editing the day.
     $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-entity-edit-0');
     $assert_session->assertWaitOnAjaxRequest();
-    $page->fillField('field_agenda[form][0][oe_agenda_days][form][inline_entity_form][entities][0][form][oe_day_title][0][value]', 'Test day title');
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][inline_entity_form][entities][0][form][title][0][value]', 'Test day title');
     $page->pressButton('Update day');
     $assert_session->assertWaitOnAjaxRequest();
     // Assert day label with title.
@@ -78,6 +78,7 @@ class DayEntityTest extends WebDriverTestBase {
     // Assert texts on the node page.
     $assert_session->pageTextContains('Test title');
     $assert_session->pageTextContains('Agenda');
+    $assert_session->pageTextContains('Test day title');
     $assert_session->pageTextContains('Mon, 08/21/2023 - 12:00');
     $assert_session->pageTextNotContains('Tue, 08/22/2023 - 12:00');
   }

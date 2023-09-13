@@ -16,15 +16,12 @@ class DayGenerateLabelSubscriber extends SubEntityGenerateLabelSubscriberBase {
    * {@inheritdoc}
    */
   protected function generateLabel(ContentEntityInterface $entity): ?string {
-    if ($entity->bundle() === 'oe_default'
-      && $entity->hasField('oe_day_title')
-      && $entity->hasField('oe_day_date')
-    ) {
+    if ($entity->bundle() === 'oe_default' && $entity->hasField('oe_day_date')) {
       // Display the day title as label if set, otherwise the date for Default
       // day type.
-      return $entity->get('oe_day_title')->isEmpty()
+      return $entity->get('title')->isEmpty()
         ? $entity->get('oe_day_date')->value
-        : $entity->get('oe_day_title')->value;
+        : $entity->get('title')->value;
     }
 
     return parent::defaultLabel($entity);

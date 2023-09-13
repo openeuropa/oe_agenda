@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.oe_agenda_day.oe_default.oe_day_date
-    - field.field.oe_agenda_day.oe_default.oe_day_title
     - oe_agenda.oe_agenda_day_type.oe_default
   module:
     - datetime
@@ -20,13 +19,5 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 1
-    region: content
-  oe_day_title:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
     region: content
 hidden: {  }

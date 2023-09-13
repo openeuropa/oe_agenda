@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Drupal\oe_agenda\Entity;
 
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\oe_content_sub_entity\Entity\SubEntityBase;
 
 /**
@@ -40,10 +42,38 @@ use Drupal\oe_content_sub_entity\Entity\SubEntityBase;
  *     "uuid" = "uuid",
  *     "langcode" = "langcode",
  *     "published" = "status",
+ *     "label" = "title",
  *   },
  *   bundle_entity_type = "oe_agenda_day_type",
  *   field_ui_base_route = "entity.oe_agenda_day_type.edit_form",
  *   content_translation_ui_skip = TRUE,
  * )
  */
-class Day extends SubEntityBase implements DayInterface {}
+class Day extends SubEntityBase implements DayInterface {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function baseFieldDefinitions(EntityTypeInterface $entity_type): array {
+    $fields = parent::baseFieldDefinitions($entity_type);
+
+    $fields['title'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Title'))
+      ->setTranslatable(TRUE)
+      ->setRevisionable(TRUE)
+      ->setSetting('max_length', 255)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE);
+
+    return $fields;
+  }
+
+}
