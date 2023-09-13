@@ -6,7 +6,6 @@ dependencies:
     - field.field.oe_agenda_session.oe_default.oe_session_hours
     - field.field.oe_agenda_session.oe_default.oe_session_intro
     - field.field.oe_agenda_session.oe_default.oe_session_moderators
-    - field.field.oe_agenda_session.oe_default.oe_session_name
     - field.field.oe_agenda_session.oe_default.oe_session_online_link
     - field.field.oe_agenda_session.oe_default.oe_session_speakers
     - field.field.oe_agenda_session.oe_default.oe_session_venue
@@ -51,14 +50,6 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  oe_session_name:
-    type: string_textfield
-    weight: 1
-    region: content
-    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

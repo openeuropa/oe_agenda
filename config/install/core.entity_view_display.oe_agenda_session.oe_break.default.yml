@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.oe_agenda_session.oe_break.oe_session_details
     - field.field.oe_agenda_session.oe_break.oe_session_hours
-    - field.field.oe_agenda_session.oe_break.oe_session_name
     - oe_agenda.oe_agenda_session_type.oe_break
   module:
     - time_field
@@ -28,13 +27,5 @@ content:
       timerange_format: 'start ~ end'
     third_party_settings: {  }
     weight: 0
-    region: content
-  oe_session_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
     region: content
 hidden: {  }
