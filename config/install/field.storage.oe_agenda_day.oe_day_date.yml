@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - oe_agenda
+id: oe_agenda_day.oe_day_date
+field_name: oe_day_date
+entity_type: oe_agenda_day
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

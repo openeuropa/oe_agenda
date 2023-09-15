@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.oe_agenda_day.oe_default.oe_day_date
+    - oe_agenda.oe_agenda_day_type.oe_default
+  module:
+    - datetime
+id: oe_agenda_day.oe_default.default
+targetEntityType: oe_agenda_day
+bundle: oe_default
+mode: default
+content:
+  oe_day_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

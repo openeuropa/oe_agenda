@@ -3,3 +3,8 @@ entity.oe_agenda_type.collection:
   route_name: entity.oe_agenda_type.collection
   description: 'Create and manage types of agenda entities'
   parent: system.admin_structure
+entity.oe_agenda_day_type.collection:
+  title: 'Agenda day types'
+  route_name: entity.oe_agenda_day_type.collection
+  description: 'Create and manage types of agenda day entities'
+  parent: system.admin_structure

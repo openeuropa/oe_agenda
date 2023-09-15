@@ -12,6 +12,16 @@ dependencies:
 
 config_devel:
   install:
+    - core.entity_form_display.oe_agenda.oe_default.default
+    - core.entity_form_display.oe_agenda_day.oe_default.default
+    - core.entity_view_display.oe_agenda.oe_default.default
+    - core.entity_view_display.oe_agenda_day.oe_default.default
+    - field.field.oe_agenda.oe_default.oe_agenda_days
+    - field.field.oe_agenda_day.oe_default.oe_day_date
+    - field.storage.oe_agenda.oe_agenda_days
+    - field.storage.oe_agenda_day.oe_day_date
     - oe_agenda.oe_agenda_type.oe_default
+    - oe_agenda.oe_agenda_day_type.oe_default
   optional:
     - language.content_settings.oe_agenda.oe_default
+    - language.content_settings.oe_agenda_day.oe_default
