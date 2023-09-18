@@ -59,6 +59,21 @@ class SessionEntityTest extends WebDriverTestBase {
     // Assert default 'Break' session label.
     $assert_session->elementTextContains('css', 'td.inline-entity-form-oe_agenda_session-label', 'Break');
 
+    // Test end time cannot be earlier than start time.
+    $page->pressButton('Add new session');
+    $assert_session->assertWaitOnAjaxRequest();
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][1][oe_session_hours][0][from]', '1230AM');
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][1][oe_session_hours][0][to]', '1200AM');
+    $page->pressButton('Create session');
+    $assert_session->assertWaitOnAjaxRequest();
+    $assert_session->statusMessageExists('error');
+    $assert_session->statusMessageContains('The Hours end time cannot be before the start time.');
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][1][oe_session_hours][0][from]', '1200AM');
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][1][oe_session_hours][0][to]', '1230AM');
+    $page->pressButton('Create session');
+    $assert_session->assertWaitOnAjaxRequest();
+    $assert_session->statusMessageNotExists('error');
+
     $page->pressButton('Create day');
     $assert_session->assertWaitOnAjaxRequest();
     // Assert day label with date.
@@ -108,7 +123,7 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->pressButton('Add new session');
     $assert_session->assertWaitOnAjaxRequest();
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][0][oe_session_hours][0][from]', '1100AM');
-    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][0][oe_session_hours][0][to]', '1200AM');
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][0][oe_session_hours][0][to]', '1200PM');
     $page->fillField('Name', 'Test default session');
     $page->pressButton('Create session');
     $assert_session->assertWaitOnAjaxRequest();
