@@ -138,9 +138,18 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_venue][0][uri]', 'https://example.com');
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_venue][0][title]', 'Test venue link');
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_venue][0][description]', 'Test venue long description.');
-
-    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_moderators][0][target_id]', 'John Doe');
-    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_speakers][0][target_id]', 'Jane Doe');
+    // Add a moderator.
+    $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_moderators-form-add');
+    $assert_session->assertWaitOnAjaxRequest();
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_moderators][form][0][oe_test_person_reference][0][target_id]', 'John Doe');
+    $page->pressButton('Create person');
+    $assert_session->assertWaitOnAjaxRequest();
+    // Add a speaker.
+    $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_speakers-form-add');
+    $assert_session->assertWaitOnAjaxRequest();
+    $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_speakers][form][0][oe_test_person_reference][0][target_id]', 'Jane Doe');
+    $page->pressButton('Create person');
+    $assert_session->assertWaitOnAjaxRequest();
     $page->pressButton('Update session');
     $assert_session->assertWaitOnAjaxRequest();
 

@@ -11,7 +11,7 @@ dependencies:
     - field.field.oe_agenda_session.oe_default.oe_session_venue
     - oe_agenda.oe_agenda_session_type.oe_default
   module:
-    - entity_reference_revisions
+    - inline_entity_form
     - link_description
     - time_field
 id: oe_agenda_session.oe_default.default
@@ -52,14 +52,22 @@ content:
       placeholder: ''
     third_party_settings: {  }
   oe_session_moderators:
-    type: entity_reference_revisions_autocomplete
+    type: inline_entity_form_complex
     weight: 6
     region: content
     settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
     third_party_settings: {  }
   oe_session_online_link:
     type: link_description
@@ -70,14 +78,22 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   oe_session_speakers:
-    type: entity_reference_revisions_autocomplete
+    type: inline_entity_form_complex
     weight: 7
     region: content
     settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
       match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
     third_party_settings: {  }
   oe_session_venue:
     type: link_description
