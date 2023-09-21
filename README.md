@@ -84,6 +84,17 @@ To enable the module, run:
 drush en oe_agenda
 ```
 
+### Default session type Moderators and Speakers fields
+
+These fields are configured to reference Person reference entities (defined by the `oe_content_sub_entity_person` submodule of [OE Content](https://github.com/openeuropa/oe_content)).
+There are no target bundles selected for these fields after installation. To make the fields work, you need to create
+and configure one or more Person sub-entity types (_Structure > Person types > Add Person type_). Then you need to select the target
+bundle(s) for the fields on the following admin pages and save the field settings:
+```
+/admin/structure/oe_agenda_session_type/oe_default/edit/fields/oe_agenda_session.oe_default.oe_session_moderators
+/admin/structure/oe_agenda_session_type/oe_default/edit/fields/oe_agenda_session.oe_default.oe_session_speakers
+```
+
 ## Development setup
 
 ### Requirements
