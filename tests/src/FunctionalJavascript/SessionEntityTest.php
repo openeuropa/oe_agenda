@@ -144,6 +144,14 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_moderators][form][0][oe_test_person_reference][0][target_id]', 'John Doe');
     $page->pressButton('Create person');
     $assert_session->assertWaitOnAjaxRequest();
+    // Assert person label.
+    $assert_session->elementTextContains('css', 'td.inline-entity-form-oe_person-label', 'John Doe');
+    // Test removing moderator.
+    $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_moderators-form-entity-remove-0');
+    $assert_session->assertWaitOnAjaxRequest();
+    $page->pressButton('ief-remove-confirm-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_moderators-form-0');
+    $assert_session->assertWaitOnAjaxRequest();
+    $assert_session->elementNotExists('css', 'td.inline-entity-form-oe_person-label');
     // Add a speaker.
     $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_speakers-form-add');
     $assert_session->assertWaitOnAjaxRequest();
@@ -168,7 +176,7 @@ class SessionEntityTest extends WebDriverTestBase {
     $assert_session->pageTextContains('Test session introduction.');
     $assert_session->pageTextContains('Test session details.');
     $assert_session->pageTextContains('Test venue long description.');
-    $assert_session->pageTextContains('John Doe');
+    $assert_session->pageTextNotContains('John Doe');
     $assert_session->pageTextContains('Jane Doe');
   }
 

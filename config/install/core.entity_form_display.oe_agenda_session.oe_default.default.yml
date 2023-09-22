@@ -67,7 +67,7 @@ content:
       collapsible: false
       collapsed: false
       revision: false
-      removed_reference: optional
+      removed_reference: delete
     third_party_settings: {  }
   oe_session_online_link:
     type: link_description
@@ -93,7 +93,7 @@ content:
       collapsible: false
       collapsed: false
       revision: false
-      removed_reference: optional
+      removed_reference: delete
     third_party_settings: {  }
   oe_session_venue:
     type: link_description
