@@ -57,9 +57,9 @@ content:
     region: content
     settings:
       form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: Moderator
+      label_plural: Moderators
       allow_new: true
       allow_existing: false
       match_operator: CONTAINS
@@ -83,9 +83,9 @@ content:
     region: content
     settings:
       form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
+      override_labels: true
+      label_singular: Speaker
+      label_plural: Speakers
       allow_new: true
       allow_existing: false
       match_operator: CONTAINS

@@ -142,7 +142,7 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_moderators-form-add');
     $assert_session->assertWaitOnAjaxRequest();
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_moderators][form][0][oe_test_person_reference][0][target_id]', 'John Doe');
-    $page->pressButton('Create person');
+    $page->pressButton('Create Moderator');
     $assert_session->assertWaitOnAjaxRequest();
     // Assert person label.
     $assert_session->elementTextContains('css', 'td.inline-entity-form-oe_person-label', 'John Doe');
@@ -156,7 +156,7 @@ class SessionEntityTest extends WebDriverTestBase {
     $page->pressButton('ief-field_agenda-form-0-oe_agenda_days-form-0-oe_day_sessions-form-0-oe_session_speakers-form-add');
     $assert_session->assertWaitOnAjaxRequest();
     $page->fillField('field_agenda[form][0][oe_agenda_days][form][0][oe_day_sessions][form][inline_entity_form][entities][0][form][oe_session_speakers][form][0][oe_test_person_reference][0][target_id]', 'Jane Doe');
-    $page->pressButton('Create person');
+    $page->pressButton('Create Speaker');
     $assert_session->assertWaitOnAjaxRequest();
     $page->pressButton('Update session');
     $assert_session->assertWaitOnAjaxRequest();
