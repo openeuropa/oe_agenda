@@ -1,0 +1,12 @@
+entity.oe_agenda_type.edit_form:
+  title: 'Edit'
+  route_name: entity.oe_agenda_type.edit_form
+  base_route: entity.oe_agenda_type.edit_form
+entity.oe_agenda_day_type.edit_form:
+  title: 'Edit'
+  route_name: entity.oe_agenda_day_type.edit_form
+  base_route: entity.oe_agenda_day_type.edit_form
+entity.oe_agenda_session_type.edit_form:
+  title: 'Edit'
+  route_name: entity.oe_agenda_session_type.edit_form
+  base_route: entity.oe_agenda_session_type.edit_form

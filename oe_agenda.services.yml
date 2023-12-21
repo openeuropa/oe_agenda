@@ -9,3 +9,8 @@ services:
     parent: oe_content_sub_entity.event_subscriber.generate_label_base
     tags:
       - { name: event_subscriber }
+  oe_agenda_session.event_subscriber.generate_label:
+    class: Drupal\oe_agenda\EventSubscriber\SessionGenerateLabelSubscriber
+    parent: oe_content_sub_entity.event_subscriber.generate_label_base
+    tags:
+      - { name: event_subscriber }

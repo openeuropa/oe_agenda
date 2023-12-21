@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.oe_agenda_session.oe_session_speakers
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - entity_reference_revisions
+id: oe_agenda_session.oe_default.oe_session_speakers
+field_name: oe_session_speakers
+entity_type: oe_agenda_session
+bundle: oe_default
+label: Speakers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:oe_person'
+  handler_settings: {  }
+field_type: entity_reference_revisions

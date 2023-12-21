@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.oe_agenda_session.oe_default.oe_session_details
+    - field.field.oe_agenda_session.oe_default.oe_session_hours
+    - field.field.oe_agenda_session.oe_default.oe_session_intro
+    - field.field.oe_agenda_session.oe_default.oe_session_moderators
+    - field.field.oe_agenda_session.oe_default.oe_session_online_link
+    - field.field.oe_agenda_session.oe_default.oe_session_speakers
+    - field.field.oe_agenda_session.oe_default.oe_session_venue
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - inline_entity_form
+    - link_description
+    - time_field
+id: oe_agenda_session.oe_default.default
+targetEntityType: oe_agenda_session
+bundle: oe_default
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  oe_session_details:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  oe_session_hours:
+    type: time_range_widget
+    weight: 0
+    region: content
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+  oe_session_intro:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  oe_session_moderators:
+    type: inline_entity_form_complex
+    weight: 6
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Moderator
+      label_plural: Moderators
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: delete
+    third_party_settings: {  }
+  oe_session_online_link:
+    type: link_description
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  oe_session_speakers:
+    type: inline_entity_form_complex
+    weight: 7
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Speaker
+      label_plural: Speakers
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: delete
+    third_party_settings: {  }
+  oe_session_venue:
+    type: link_description
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  status: true
