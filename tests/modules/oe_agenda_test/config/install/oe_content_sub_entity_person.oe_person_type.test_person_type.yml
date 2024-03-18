@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: test_person_type
+label: 'Test person type'
+description: ''

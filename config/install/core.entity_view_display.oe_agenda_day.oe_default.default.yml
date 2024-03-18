@@ -3,9 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.oe_agenda_day.oe_default.oe_day_date
+    - field.field.oe_agenda_day.oe_default.oe_day_sessions
     - oe_agenda.oe_agenda_day_type.oe_default
   module:
     - datetime
+    - entity_reference_revisions
 id: oe_agenda_day.oe_default.default
 targetEntityType: oe_agenda_day
 bundle: oe_default
@@ -19,5 +21,14 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 1
+    region: content
+  oe_day_sessions:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

@@ -8,3 +8,8 @@ entity.oe_agenda_day_type.add_form:
   title: 'Add agenda day type'
   appears_on:
     - entity.oe_agenda_day_type.collection
+entity.oe_agenda_session_type.add_form:
+  route_name: entity.oe_agenda_session_type.add_form
+  title: 'Add agenda session type'
+  appears_on:
+    - entity.oe_agenda_session_type.collection

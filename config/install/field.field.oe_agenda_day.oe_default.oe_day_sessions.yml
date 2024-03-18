@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.oe_agenda_day.oe_day_sessions
+    - oe_agenda.oe_agenda_day_type.oe_default
+    - oe_agenda.oe_agenda_session_type.oe_break
+    - oe_agenda.oe_agenda_session_type.oe_default
+  module:
+    - composite_reference
+    - entity_reference_revisions
+third_party_settings:
+  composite_reference:
+    composite: true
+    composite_revisions: true
+id: oe_agenda_day.oe_default.oe_day_sessions
+field_name: oe_day_sessions
+entity_type: oe_agenda_day
+bundle: oe_default
+label: Sessions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:oe_agenda_session'
+  handler_settings:
+    target_bundles:
+      oe_break: oe_break
+      oe_default: oe_default
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: oe_break
+field_type: entity_reference_revisions

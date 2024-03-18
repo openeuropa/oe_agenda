@@ -4,24 +4,49 @@ package: OpenEuropa
 type: module
 core_version_requirement: ^10
 dependencies:
-  - composite_reference:composite_reference
-  - entity_reference_revisions:entity_reference_revisions
   - inline_entity_form:inline_entity_form
-  - oe_content:oe_content_entity
-  - oe_content:oe_content_sub_entity
+  - link_description:link_description
+  - oe_content:oe_content_sub_entity_person
+  - time_field:time_field
 
 config_devel:
   install:
     - core.entity_form_display.oe_agenda.oe_default.default
     - core.entity_form_display.oe_agenda_day.oe_default.default
+    - core.entity_form_display.oe_agenda_session.oe_break.default
+    - core.entity_form_display.oe_agenda_session.oe_default.default
     - core.entity_view_display.oe_agenda.oe_default.default
     - core.entity_view_display.oe_agenda_day.oe_default.default
+    - core.entity_view_display.oe_agenda_session.oe_break.default
+    - core.entity_view_display.oe_agenda_session.oe_default.default
     - field.field.oe_agenda.oe_default.oe_agenda_days
     - field.field.oe_agenda_day.oe_default.oe_day_date
+    - field.field.oe_agenda_day.oe_default.oe_day_sessions
+    - field.field.oe_agenda_session.oe_break.oe_session_details
+    - field.field.oe_agenda_session.oe_break.oe_session_hours
+    - field.field.oe_agenda_session.oe_default.oe_session_details
+    - field.field.oe_agenda_session.oe_default.oe_session_hours
+    - field.field.oe_agenda_session.oe_default.oe_session_intro
+    - field.field.oe_agenda_session.oe_default.oe_session_moderators
+    - field.field.oe_agenda_session.oe_default.oe_session_online_link
+    - field.field.oe_agenda_session.oe_default.oe_session_speakers
+    - field.field.oe_agenda_session.oe_default.oe_session_venue
     - field.storage.oe_agenda.oe_agenda_days
     - field.storage.oe_agenda_day.oe_day_date
+    - field.storage.oe_agenda_day.oe_day_sessions
+    - field.storage.oe_agenda_session.oe_session_details
+    - field.storage.oe_agenda_session.oe_session_hours
+    - field.storage.oe_agenda_session.oe_session_intro
+    - field.storage.oe_agenda_session.oe_session_moderators
+    - field.storage.oe_agenda_session.oe_session_online_link
+    - field.storage.oe_agenda_session.oe_session_speakers
+    - field.storage.oe_agenda_session.oe_session_venue
     - oe_agenda.oe_agenda_type.oe_default
     - oe_agenda.oe_agenda_day_type.oe_default
+    - oe_agenda.oe_agenda_session_type.oe_break
+    - oe_agenda.oe_agenda_session_type.oe_default
   optional:
     - language.content_settings.oe_agenda.oe_default
     - language.content_settings.oe_agenda_day.oe_default
+    - language.content_settings.oe_agenda_session.oe_break
+    - language.content_settings.oe_agenda_session.oe_default
