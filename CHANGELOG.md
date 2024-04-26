@@ -1,8 +1,16 @@
-  # Change Log
+# Change Log
 
-## [1.0.0-alpha1](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha1) (2024-03-19)
+## [1.0.0-alpha2](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha2) (2024-04-26)
+[Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha1...1.0.0-alpha2)
+
 **Merged pull requests:**
 
+- UCPKN-3062: Register default theme implementations for entities. [\#7](https://github.com/openeuropa/oe_agenda/pull/7) ([kp77](https://github.com/kp77))
+
+## [1.0.0-alpha1](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha1) (2024-03-20)
+**Merged pull requests:**
+
+- Prepare release 1.0.0-alpha1 [\#6](https://github.com/openeuropa/oe_agenda/pull/6) ([drishu](https://github.com/drishu))
 - UCPKN-2790: Drop D9.4 support and use PHP 8.1/8.2. [\#5](https://github.com/openeuropa/oe_agenda/pull/5) ([kp77](https://github.com/kp77))
 - UCPKN-2282: Implement Session sub-entity. [\#4](https://github.com/openeuropa/oe_agenda/pull/4) ([kp77](https://github.com/kp77))
 - UCPKN-2281: Implement Day sub-entity. [\#3](https://github.com/openeuropa/oe_agenda/pull/3) ([kp77](https://github.com/kp77))
