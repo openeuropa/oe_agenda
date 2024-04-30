@@ -13,6 +13,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - link_description
+    - text
     - time_field
 id: oe_agenda_session.oe_default.default
 targetEntityType: oe_agenda_session
@@ -20,7 +21,7 @@ bundle: oe_default
 mode: default
 content:
   oe_session_details:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }

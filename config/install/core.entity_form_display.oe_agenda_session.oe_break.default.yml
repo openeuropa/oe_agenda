@@ -6,6 +6,7 @@ dependencies:
     - field.field.oe_agenda_session.oe_break.oe_session_hours
     - oe_agenda.oe_agenda_session_type.oe_break
   module:
+    - text
     - time_field
 id: oe_agenda_session.oe_break.default
 targetEntityType: oe_agenda_session
@@ -21,7 +22,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   oe_session_details:
-    type: string_textarea
+    type: text_textarea
     weight: 2
     region: content
     settings:
