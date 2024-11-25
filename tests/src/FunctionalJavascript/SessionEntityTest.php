@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\oe_agenda\FunctionalJavascript;
 
-use Drupal\field\Entity\FieldConfig;
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Tests\node\Traits\NodeCreationTrait;
+use Drupal\field\Entity\FieldConfig;
 
 /**
  * Functional tests for the Session sub-entity type.
