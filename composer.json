@@ -12,7 +12,7 @@
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/link_description": "^1.0",
         "drupal/time_field": "^2.1",
-        "openeuropa/oe_content": "^4.1"
+        "openeuropa/oe_content": "^3.1 || ^4.2"
     },
     "require-dev": {
         "composer/installers": "^2.0",
@@ -69,11 +69,12 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
-            "drupal/core-composer-scaffold": true,
-            "phpro/grumphp": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "php-http/discovery": false,
+            "phpro/grumphp": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": false
+            "tbachert/spi": true
         }
     }
 }
