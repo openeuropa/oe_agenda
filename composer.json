@@ -74,7 +74,7 @@
             "php-http/discovery": false,
             "phpro/grumphp": true,
             "phpstan/extension-installer": true,
-            "tbachert/spi": true
+            "tbachert/spi": false
         }
     }
 }
