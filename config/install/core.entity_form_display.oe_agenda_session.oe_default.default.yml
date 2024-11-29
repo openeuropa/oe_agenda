@@ -13,6 +13,7 @@ dependencies:
   module:
     - inline_entity_form
     - link_description
+    - text
     - time_field
 id: oe_agenda_session.oe_default.default
 targetEntityType: oe_agenda_session
@@ -28,7 +29,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   oe_session_details:
-    type: string_textarea
+    type: text_textarea
     weight: 3
     region: content
     settings:
