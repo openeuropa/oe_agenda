@@ -1,10 +1,20 @@
 # Change Log
 
+## [1.0.0-alpha3](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha3) (2024-12-16)
+[Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha2...1.0.0-alpha3)
+
+**Merged pull requests:**
+
+- UCPKN-3399: Update oe\_content to 4.2. [\#11](https://github.com/openeuropa/oe_agenda/pull/11) ([kp77](https://github.com/kp77))
+- OEL-3056: Update to Drupal 10.3 [\#10](https://github.com/openeuropa/oe_agenda/pull/10) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+- UCPKN-3087: Update install config for session details field. [\#9](https://github.com/openeuropa/oe_agenda/pull/9) ([kp77](https://github.com/kp77))
+
 ## [1.0.0-alpha2](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha2) (2024-04-26)
 [Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha1...1.0.0-alpha2)
 
 **Merged pull requests:**
 
+- Prepare changelog for release 1.0.0-alpha2. [\#8](https://github.com/openeuropa/oe_agenda/pull/8) ([brummbar](https://github.com/brummbar))
 - UCPKN-3062: Register default theme implementations for entities. [\#7](https://github.com/openeuropa/oe_agenda/pull/7) ([kp77](https://github.com/kp77))
 
 ## [1.0.0-alpha1](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha1) (2024-03-20)
