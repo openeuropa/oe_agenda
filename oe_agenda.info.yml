@@ -2,7 +2,7 @@ name: OpenEuropa Agenda
 description: An agenda entity, organised in days and sessions per day.
 package: OpenEuropa
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - inline_entity_form:inline_entity_form
   - link_description:link_description
