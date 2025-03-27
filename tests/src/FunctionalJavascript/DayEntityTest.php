@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\oe_agenda\FunctionalJavascript;
 
+use Drupal\Core\Datetime\Entity\DateFormat;
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 
 /**
@@ -22,6 +23,22 @@ class DayEntityTest extends WebDriverTestBase {
   protected static $modules = [
     'oe_agenda_test',
   ];
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp(): void {
+    parent::setUp();
+
+    // Make sure medium date format has 'D, j M Y - H:i' pattern.
+    // In Drupal 11.1.0 the installed default date formats have changed.
+    // See: https://www.drupal.org/node/3467774
+    // @todo Remove when core versions lower than 11.1 are not supported
+    //   anymore.
+    DateFormat::load('medium')
+      ->setPattern('D, j M Y - H:i')
+      ->save();
+  }
 
   /**
    * Tests adding Default day to an agenda.
@@ -79,8 +96,8 @@ class DayEntityTest extends WebDriverTestBase {
     $assert_session->pageTextContains('Test title');
     $assert_session->pageTextContains('Agenda');
     $assert_session->pageTextContains('Test day title');
-    $assert_session->pageTextContains('Mon, 08/21/2023 - 12:00');
-    $assert_session->pageTextNotContains('Tue, 08/22/2023 - 12:00');
+    $assert_session->pageTextContains('Mon, 21 Aug 2023 - 12:00');
+    $assert_session->pageTextNotContains('Tue, 22 Aug 2023 - 12:00');
   }
 
 }
