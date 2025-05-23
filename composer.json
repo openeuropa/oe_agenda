@@ -8,21 +8,20 @@
     "require": {
         "php": ">=8.1",
         "drupal/composite_reference": "^2.2",
-        "drupal/core": "^10",
+        "drupal/core": "^10 || ^11",
         "drupal/entity_reference_revisions": "^1.10",
         "drupal/link_description": "^1.0",
         "drupal/time_field": "^2.1",
-        "openeuropa/oe_content": "^3.1 || ^4.2"
+        "openeuropa/oe_content": "^3.1 || ^4.8"
     },
     "require-dev": {
         "composer/installers": "^2.0",
         "drupal/config_devel": "^1.9",
-        "drupal/core-composer-scaffold": "^10",
-        "drupal/core-dev": "^10",
-        "drush/drush": "^12.4",
+        "drupal/core-composer-scaffold": "^10 || ^11",
+        "drupal/core-dev": "^10 || ^11",
+        "drush/drush": "^12.4 || ^13",
         "openeuropa/code-review-drupal": "^1.0.0-alpha",
-        "openeuropa/task-runner-drupal-project-symlink": "^1.0",
-        "phpspec/prophecy-phpunit": "^2"
+        "openeuropa/task-runner-drupal-project-symlink": "^1.0"
     },
     "scripts": {
         "post-install-cmd": "./vendor/bin/run drupal:site-setup",
@@ -32,10 +31,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/openeuropa/code-review-drupal.git"
         }
     ],
     "autoload": {
@@ -59,7 +54,8 @@
         },
         "patches": {
             "drupal/time_field": {
-                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch"
+                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch",
+                "https://www.drupal.org/project/time_field/issues/3477472": "https://www.drupal.org/files/issues/2025-01-17/time_field-fielditembase-category-cannot-be-translatable.patch"
             }
         },
         "drupal-scaffold": {

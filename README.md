@@ -14,7 +14,7 @@ Drupal module that exposes an agenda. The module defines the Agenda, Day, and Se
 
 Depends on the following software:
 
-* [PHP >=8.0](http://php.net/)
+* [PHP >=8.1](http://php.net/)
 * Virtuoso (or equivalent) triple store
 
 ## Installation
