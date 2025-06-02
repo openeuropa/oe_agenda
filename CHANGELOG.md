@@ -1,10 +1,19 @@
 # Change Log
 
+## [1.0.0-alpha4](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha4) (2025-06-02)
+[Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha3...1.0.0-alpha4)
+
+**Merged pull requests:**
+
+- EWPP-5408: Update to Drupal 11. [\#14](https://github.com/openeuropa/oe_agenda/pull/14) ([kp77](https://github.com/kp77))
+- EWPP-4991: Update to php8.3. [\#13](https://github.com/openeuropa/oe_agenda/pull/13) ([drishu](https://github.com/drishu))
+
 ## [1.0.0-alpha3](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha3) (2024-12-16)
 [Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha2...1.0.0-alpha3)
 
 **Merged pull requests:**
 
+- Prepare release 1.0.0-alpha3. [\#12](https://github.com/openeuropa/oe_agenda/pull/12) ([drishu](https://github.com/drishu))
 - UCPKN-3399: Update oe\_content to 4.2. [\#11](https://github.com/openeuropa/oe_agenda/pull/11) ([kp77](https://github.com/kp77))
 - OEL-3056: Update to Drupal 10.3 [\#10](https://github.com/openeuropa/oe_agenda/pull/10) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
 - UCPKN-3087: Update install config for session details field. [\#9](https://github.com/openeuropa/oe_agenda/pull/9) ([kp77](https://github.com/kp77))
