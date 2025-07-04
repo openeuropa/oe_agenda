@@ -1,10 +1,21 @@
 # Change Log
 
-## [1.0.0-alpha4](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha4) (2025-06-02)
+## [1.0.0-alpha5](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha5) (2025-07-04)
+
+[Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha4...1.0.0-alpha5)
+
+**Merged pull requests:**
+
+- OEL-3944: Removing obsolete patch. [\#17](https://github.com/openeuropa/oe_agenda/pull/17) ([vengador](https://github.com/vengador))
+- OEL-3858: Updated images. [\#16](https://github.com/openeuropa/oe_agenda/pull/16) ([tibi2303](https://github.com/tibi2303))
+
+## [1.0.0-alpha4](https://github.com/openeuropa/oe_agenda/tree/1.0.0-alpha4) (2025-06-03)
+
 [Full Changelog](https://github.com/openeuropa/oe_agenda/compare/1.0.0-alpha3...1.0.0-alpha4)
 
 **Merged pull requests:**
 
+- Prepare release 1.0.0-alpha4. [\#15](https://github.com/openeuropa/oe_agenda/pull/15) ([drishu](https://github.com/drishu))
 - EWPP-5408: Update to Drupal 11. [\#14](https://github.com/openeuropa/oe_agenda/pull/14) ([kp77](https://github.com/kp77))
 - EWPP-4991: Update to php8.3. [\#13](https://github.com/openeuropa/oe_agenda/pull/13) ([drishu](https://github.com/drishu))
 
