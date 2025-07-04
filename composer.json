@@ -54,8 +54,7 @@
         },
         "patches": {
             "drupal/time_field": {
-                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch",
-                "https://www.drupal.org/project/time_field/issues/3477472": "https://www.drupal.org/files/issues/2025-01-17/time_field-fielditembase-category-cannot-be-translatable.patch"
+                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch"
             }
         },
         "drupal-scaffold": {
