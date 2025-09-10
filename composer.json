@@ -19,6 +19,7 @@
         "drupal/config_devel": "^1.9",
         "drupal/core-composer-scaffold": "^10 || ^11",
         "drupal/core-dev": "^10 || ^11",
+        "drupal/entity_browser": "~2.13.0",
         "drush/drush": "^12.4 || ^13",
         "openeuropa/code-review-drupal": "^1.0.0-alpha",
         "openeuropa/task-runner-drupal-project-symlink": "^1.0"
@@ -54,7 +55,8 @@
         },
         "patches": {
             "drupal/time_field": {
-                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch"
+                "https://www.drupal.org/project/time_field/issues/3176718": "https://www.drupal.org/files/issues/2023-09-18/validation_for_time-3176718-8.patch",
+                "https://www.drupal.org/project/time_field/issues/3545668": "https://www.drupal.org/files/issues/2025-09-09/time_field-3545668-3-midnight-vs-null.patch"
             }
         },
         "drupal-scaffold": {
